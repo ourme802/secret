@@ -13,7 +13,8 @@ document.addEventListener('DOMContentLoaded', function() {
 
     document.getElementById('btnTak').addEventListener('click', function() {
         document.getElementById('pytanieWalentynka').classList.add('ukryj');
-        document.getElementById('pytanieMeeting').classList.remove('ukryj'); // Poprawka: 'aktyne' na 'ukryj'
+        document.getElementById('pytanieMeeting').classList.remove('ukryj');
+        document.getElementById('pytanieMeeting').classList.add('aktywne'); // Poprawka: 'aktyne' na 'ukryj'
     });
 
     document.getElementById('btnNie').addEventListener('click', function() {
@@ -22,7 +23,8 @@ document.addEventListener('DOMContentLoaded', function() {
 
     document.getElementById('meetingTak').addEventListener('click', function() {
         document.getElementById('pytanieMeeting').classList.add('ukryj');
-        document.getElementById('pytaniegodzina').classList.remove('ukryj'); // Poprawka: 'aktyne' na 'ukryj'
+        document.getElementById('pytaniegodzina').classList.remove('ukryj');
+        document.getElementById('pytaniegodzina').classList.add('aktywne'); // Poprawka: 'aktyne' na 'ukryj'
     });
 
     document.getElementById('meetingNie').addEventListener('click', function() {
@@ -35,6 +37,7 @@ document.addEventListener('DOMContentLoaded', function() {
             document.getElementById('tekstOdpowiedzi').textContent = odpowiedzUzytkownika;
             document.getElementById('wynik').classList.remove('ukryj');
             document.getElementById('pytaniegodzina').classList.add('ukryj');
+            document.getElementById('wynik').classList.add('aktywne');
         } else {
             alert('Proszę wpisz odpowiedź.');
         }
